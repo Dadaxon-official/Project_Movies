@@ -1,0 +1,250 @@
+body {
+    background-color: #000F26;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head {
+    background-repeat: no-repeat;
+    background-image: url("img/Bitmap.png");
+    /*width: 100%;*/
+    height: 100vh;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.modal-backdrop.show {
+    opacity: 0;
+!important;
+}
+
+
+/*.text1 {*/
+/*    box-sizing: border-box;*/
+/*    padding-top:100px;*/
+/*}*/
+
+.navbard {
+    font-size: 25px;
+}
+
+.star {
+    width: 30px;
+    text-decoration: none;
+}
+
+.text1, p {
+    font-size: 16px;
+}
+
+.corus {
+    padding-top: 350px;
+    padding-left: 150px;
+
+}
+
+.cor {
+    width: 30px;
+    padding: 1px;
+}
+
+.play {
+    font-size: 30px;
+}
+
+
+/*HEAD 2*/
+
+.head2 {
+    background-color: #000F26;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+.balli {
+    margin-right: 10px;
+    padding-top: 40px;
+}
+
+.ppp1 {
+    padding-right: 15px;
+    width: 30px;
+}
+
+.Aquam {
+    width: 100%;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    /*border: none;*/
+}
+
+.card-body {
+    background-color: #000F26;
+}
+
+.signrow {
+    border-radius: 10px;
+    background-color: #2f3d53;
+    padding-left: -15px;
+}
+
+.colsign7 {
+    border-radius: 10px;
+    background-size: cover;
+    background-image: url("img/Path 5 (1).png");
+
+}
+
+.btnsignup {
+    margin-top: 30px;
+    margin-left: -50px;
+    width: 100%;
+    background-size: cover;
+    background-image: url("img/Rectangle1.png");
+
+}
+
+.textsign {
+    padding: 30px;
+}
+
+.textsign2 {
+    padding-top: 30px;
+    margin-left: 30px;
+}
+
+.imgfire {
+    border-radius: 10px;
+    position: relative;
+    margin-left: 0;
+    padding-left: -50px;
+
+}
+
+.geta {
+    position: absolute;
+    margin-top: -100px;
+}
+
+.getah4 {
+    position: absolute;
+    margin-top: -80px;
+}
+
+.geta1 {
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 600px;
+}
+
+.getah41 {
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 600px;
+}
+
+.img1 {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.inputsearch {
+    text-decoration: none;
+    background-color: #000F26;
+    border: none;
+    margin-top: 45px;
+    margin-left: 100px;
+    color: white;
+
+}
+
+.hrinput {
+    float: left;
+    width: 250px;
+    margin-left: 100px;
+    margin-right: 0;
+    padding-right: 10px;
+}
+
+.Bitma {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.rob {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.robert-info {
+    position: absolute;
+    margin-top: -250px;
+}
+
+.film3 {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.bitm1 {
+    /*background-image: url(img/bitm1.png);*/
+    border-bottom: 2px solid papayawhip;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bitm2 {
+    /*background-image: url(img/bitm2.png);*/
+    border-bottom: 2px solid papayawhip;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bitm3 {
+    /*background-image: url(img/bitm3.png);*/
+    border-bottom: 2px solid papayawhip;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bitmt3 {
+    margin-top: -160px;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+    .bitmimg {
+        width: 500px;
+    }
+}
+
+
+.btmtp {
+    margin-right: -600px;
+}
+
+.hrinput2 {
+    width: 220px;
+    margin-left: 100px;
+}
+
+.btnup {
+    padding: 10px 30px;
+    margin-top: 90px;
+    margin-left: 20px;
+}

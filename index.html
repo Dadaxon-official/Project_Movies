@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FILMS's Trailer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon"
+          href="https://e7.pngegg.com/pngimages/725/684/png-clipart-movie-time-graphic-film-cinema-logo-film-elements-cdr-food.png"
+          type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+            integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="head">
+    <div class="container-fluid pt-3 pb-5 justify-content-center text-center">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark justify-content-center">
+            <div class="float-left mr-5">
+                <a href="http://asilmedia.net/"><img class="pr-1 " src="img/UMovies.png" title="LOGO" alt=""></a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#MyNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="MyNavbar">
+                <ul class="navbar-nav mr-5 text-center">
+                    <li class="nav-item mr-md-5">
+                        <a class="nav-link text-light" href="#"><h3>MOVIES</h3></a>
+                    </li>
+                    <li class="nav-item mr-md-5">
+                        <a class="nav-link text-light" href="#"><h3>SHOWS</h3></a>
+                    </li>
+                    <li class="nav-item mr-md-5">
+                        <a class="nav-link text-light" href="#"><h3>ACTORS</h3></a>
+                    </li>
+                    <li class="nav-item mr-md-5">
+                        <a class="nav-link text-light" href="#"><h3>NEWS</h3></a>
+                    </li>
+                    <li class="nav-item mr-md-5">
+                        <a class="nav-link text-light" href="#"><h3>COMMUNITY</h3></a>
+                    </li>
+                </ul>
+                <button class="btn btn-secondary mr-2">LOG IN</button>
+                <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                    SIGN IN
+                </button>
+            </div>
+        </nav>
+
+        <div class="d-flex float-right mt-3">
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title text-info" id="ModalLabel">Get Your Plan</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span class="text-dark" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body m-3 p-2">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon1">
+                                                <i class="fa fa-user "></i>
+                                            </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Name"
+                                       aria-label="Name" id="name" required="required"
+                                       aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                            <span class="input-group-text text-info" id="basic-addon">
+                                                <i class="fa fa-phone "></i>
+                                            </span>
+                                </div>
+                                <input type="tel" class="form-control" placeholder="+998 Phone"
+                                       aria-label="phone" id="phone" required="required"
+                                       pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" aria-describedby="basic-addon">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <h5 class="Ithost text-info d-flex">IT Host</h5>
+                            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close
+                            </button>
+
+                            <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    onclick="Save()">Save changes
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="Modal2" tabindex="-1" role="dialog"
+                     aria-labelledby="Modal2Label" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="Modal2Label">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h3 CLASS="text-info text-center">SUCCESSFUL</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-dark"
+                                        data-toggle="modal" data-dismiss="modal">OK
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pt-5 mt-5">
+        <div class=" row">
+            <div class="text1 col-md-8 text-white">
+                <p>31 SEPT 2019</p>
+                <h1>AVENGERS - INFINITY WAR</h1>
+                <p>In 2016, Marvel shortened the title to Avengers: Infinity War. Filming began in January 2017 at
+                    Pinewood Atlanta Studios in Fayette County, Georgia, with a large cast consisting mostly of actors.
+                </p>
+                <div class="stars">
+                    <a href="#"> <img class="star" src="img/Path.png" alt=""> </a>
+                    <a href="#"> <img class="star" src="img/Path.png" alt=""> </a>
+                    <a href="#"> <img class="star" src="img/Path.png" alt=""> </a>
+                    <a href="#"> <img class="star" src="img/Path.png" alt=""> </a>
+                    <a href="#"> <img class="star" src="img/Path.png" alt=""> </a>
+
+                    12K Reviews
+                </div>
+                <div class="mt-5 row">
+                    <i class="fa fa-play-circle-o fa-3x float-left col-md-1" aria-hidden="true"></i>
+                    <h3 class="col-md-4"> Watch Trailer</h3>
+
+                </div>
+
+                <button class="btn btn-danger px-5 mt-5">BOOK SHOP</button>
+
+            </div>
+            <div class="text1 col-md-4">
+                <div class="corus">
+                    <button class="cor btn btn-warning"></button>
+                    <button class="cor btn btn-secondary"></button>
+                    <button class="cor btn btn-secondary"></button>
+                    <button class="cor btn btn-secondary"></button>
+                    <button class="cor btn btn-secondary"></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="head2 pt-5">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-6 text-white">
+                Top Actions
+                <h2>RECOMMENDED MOVIES</h2>
+                <hr class="border-white">
+            </div>
+            <div class="col-md-6">
+                <div class="PPP float-right pt-4">
+                    <a href="#"> <img class="ppp1" src="img/Path%20left.png" alt=""> </a>
+                    <a href="#"> <img class="ppp1" src="img/P%20right.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-white border-dark">
+                    <div class="card-header p-0 m-0">
+                        <img class="Aquam" src="img/Aquamen.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h6>AQUAMAN</h6>
+                        <p>Aquaman is a 2018 American superhero film based on the DC Comics character
+                            of the same..... For the sequence,</p>
+                        <br>
+                        <div class="">
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <p>12K Reviews</p>
+                        </div>
+                        <div class="card-footer justify-content-center text-center">
+                            <button class=" btn btn-danger">DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white border-dark">
+                    <div class="card-header p-0 m-0">
+                        <img class="Aquam" src="img/Avatar.jpg" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h6>AVATAR</h6>
+                        <p> Stephen Lang in Avatar (2009) Zoe Saldana at an event for Avatar (2009)
+                            Avatar prop in the Profiles in… Avatar prop in the Profiles
+                            <in></in>
+                        </p>
+                        <br>
+                        <div class="">
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+
+                            <p>12K Reviews</p>
+                        </div>
+                        <div class="card-footer justify-content-center text-center">
+                            <button class=" btn btn-danger">DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white border-dark">
+                    <div class="card-header p-0 m-0">
+                        <img class="Aquam" src="img/Pirates.png" alt="">
+                    </div>
+                    <div class="card-body justify-content-center">
+                        <h6>PIRATES OF THE CARIBIAN</h6>
+                        <p>Happy-go-lucky troublemaker Capt. Jack Sparrow works his way out of a blood
+                            debt with the ghostly</p>
+                        <br>
+                        <div class="">
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+                            <a href="#"> <img class="star1" src="img/Path.png" alt=""> </a>
+
+                            <p>12K Reviews</p>
+                        </div>
+                        <div class="card-footer justify-content-center text-center">
+                            <button class=" btn btn-danger">DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-5 pt-5">
+        <div class="signrow row ">
+            <div class="colsign7 col-md-7 pl-0">
+                <div class="textsign text-white ">
+                    Get a 40% OFF for first
+                    <h6 class="text-white">PREMIUM MEMBERSHIP</h6>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="textsign2 text-white">
+                    Sign Up to get more
+                    <h6 class="text-white"> EXITING OFFERS </h6>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="btnsignup btn text-white "> SIGN UP</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <nav>
+                    <ul class="nav pt-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white active " href="#">HOLLYWOOD</a>
+                            <hr class=" mt-0 border-white">
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">BOLLYWOOD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">TOLLYWOOD</a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="col-md-6">
+                <div class="PPP float-right pt-4">
+                    <a href="#"> <img class="ppp1" src="img/Path%20left.png" alt=""> </a>
+                    <a href="#"> <img class="ppp1" src="img/P%20right.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pb-5">
+        <div class="row">
+            <div class="bit1 col-6 col-md-4 col-lg">
+                <img class="img1" src="img/Bit1.png" alt="RASM1">
+            </div>
+            <div class="bit1 col-6 col-md-4 col-lg">
+                <img class="img1" src="img/bit%202.png" alt="RASM2">
+            </div>
+            <div class="bit1 col-6 col-md-4 col-lg">
+                <img class="img1" src="img/Bit%203.png" alt="">
+            </div>
+            <div class="bit1 col-6 col-md-4 col-lg">
+                <img class="img1" src="img/Bit%204.png" alt="">
+            </div>
+            <div class="bit1 col-6 col-md-4 col-lg">
+                <img class="img1" src="img/Bit%205.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-white">
+                Top Actors
+                <h2>MOVIES BY ACTORS</h2>
+                <hr class="border-white">
+            </div>
+            <div class="col-md-6">
+                <input class=" inputsearch" type="text" placeholder="Search by Actors">
+                <i class="fa fa-search text-dark" aria-hidden="true"></i>
+                <hr class="hrinput border-white">
+                <div class="PPP float-right pt-0">
+                    <a href="#"> <img class="ppp1" src="img/Path%20left.png" alt=""> </a>
+                    <a href="#"> <img class="ppp1" src="img/P%20right.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5 ">
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma1.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Jason Statham
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma2.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Robert Downey
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma3.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Deepika Paduk
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma4.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Varun Dhawan
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma5.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Allu Arjun
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+
+                <div class="card">
+                    <div class="card-header p-0 m-0">
+                        <img class="Bitma" src="img/Bitma6.png" alt="">
+                    </div>
+                    <div class="card-body text-white bg-dark py-3 text-center">
+                        Jessica Alba
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img class=" robert" src="img/robet%20jr.png" alt="">
+                <div class="robert-info text-white mx-0 ">
+                    <h2> Robert Downey Jr.</h2>
+                    <p class="text-secondary">The past for me was 30 years of dependency, depravity, and despair ….
+                        otherwise known as ‘An
+                        Actor
+                        Prepares!</p>
+                    <i class="fa fa-play text-danger" aria-hidden="true"> </i>
+                    View Robert Biography
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="row mt-5 pt-5 pl-5">
+                    <div class="col-md-10 d-inline">
+                        <h6 class="text-white float-left">BEST FILMS/</h6>
+                        <h6 class="text-secondary float-left"> POPULAR/</h6>
+                        <h6 class="text-secondary"> LATEST</h6>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="PPP float-right pt-0">
+                            <a href="#"> <img class="ppp1" src="img/Path%20left.png" alt=""> </a>
+                            <a href="#"> <img class="ppp1" src="img/P%20right.png" alt=""> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-5">
+                    <div class=" robdiv col-lg-3 col-6">
+                        <img class="rob" src="img/rob%201.png" alt="">
+                    </div>
+                    <div class=" robdiv col-lg-3 col-6">
+                        <img class="rob" src="img/rob%202.png" alt="">
+                    </div>
+                    <div class=" robdiv col-lg-3 col-6">
+                        <img class="rob" src="img/rob%203.png" alt="">
+                    </div>
+                    <div class=" robdiv col-lg-3 col-6">
+                        <img class="rob" src="img/rob%204.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 pb-5">
+        <div class="row">
+            <div class="col-md-4 text-white">
+                <h5>TRENDING</h5>
+                <h1>LATEST NEWS</h1>
+                <hr class="border-white">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="film3">
+            <div class="row">
+                <div class="bitm1 col-lg-3 col-md-6 text-white">
+                    <img src="img/bitm1.png" alt="">
+                    <div class="">
+                        Miss Peregrine's Home for Peculiar Children is a 2016 fantasy film directed by Tim Burton and
+                        written by
+                        Jane Goldman, based on the 2011 novel of the same name by Ransom Riggs.
+                    </div>
+                </div>
+                <div class="bitm2 col-lg-6 col-md-12 text-white">
+<!--                    <img class="bitmimg" src="img/bitm2.png" alt="">-->
+                    <div class="">Miss Peregrine's Home for Peculiar Children is a 2016 fantasy
+                        film directed by Tim Burton and written by
+                        Jane Goldman, based on the 2011 novel of the same name by Ransom Loremis an unofficial term used
+                        to
+                        refer to an American Peregrine's Home for Peculiar Children is a 2016 fantasy film directed by
+                        Tim Burton and
+                        written by
+                    </div>
+                </div>
+                <div class="bitm3 col-lg-3 col-md-6 text-white">
+                    <img src="img/bitm3.png" alt="">
+                    <div>The DC Extended Universe (DCEU) is an unofficial term used to refer to an American media
+                        .... In October
+                        2014, Warner Bros. announced a slate of ten DC films
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pb-5 pt-4">
+        <div class="signrow row ">
+            <div class="colsign7 col-md-7 col-6 pl-0">
+                <div class="textsign text-white ">
+                    Get a 40% OFF for first
+                    <h6 class="text-white">PREMIUM MEMBERSHIP</h6>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="textsign2 text-white">
+                    Sign Up to get more
+                    <h6 class="text-white"> EXITING OFFERS </h6>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 text-center">
+                <button class="btnsignup btn text-white "> SIGN UP</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container pt-5 pb-5">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/UMovies.png" alt="">
+                    <p class="text-secondary pt-3">Designed and Copyrights By</p>
+                    <p class="text-danger "> Jayprakash Kachare</p>
+
+                    <div class="icons">
+                        <i class="border-white text-primary fa fa-facebook-square fa-3x" aria-hidden="true"></i>
+                        <i class="text-white fa fa-twitter-square fa-3x" aria-hidden="true"></i>
+                        <i class="text-white fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="text-white">Quick Links</h4>
+                    <a class="" href="#"><p class="text-secondary mt-3">Movies</p></a>
+                    <a href="#"><p class="text-secondary ">Actors</p></a>
+                    <a href="#"><p class="text-secondary">News</p></a>
+                    <a href="#"><p class="text-secondary">About</p></a>
+                    <a href="#"><p class="text-secondary">Privacy Policy</p></a>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-white ml-5 pl-5">News letter</h4>
+                    <input class=" inputsearch pl-3" type="text" placeholder="Newsletter Sign Up">
+                    <hr class="hrinput2 border-white">
+                </div>
+                <div class="col-md-2">
+                    <div class="btnup btn btn-danger text-white text-center">SIGN UP</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</div>
+<footer>
+
+    <h5 CLASS="text-center text-white bg-secondary pt-2 pb-2 mb-0">BY DADAXON & NITRO 5</h5>
+
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
